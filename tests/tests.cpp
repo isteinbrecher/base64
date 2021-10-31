@@ -33,8 +33,11 @@ int main()
 {
   std::string test = "Man";
   auto res = base64::encode(test.c_str(), test.length());
+  auto back = base64::decode(res);
 
   std::cout << res;
+  std::cout << "\n";
+  std::cout << std::string(back.data(), back.size());
   std::cout << "\n";
 
   return 0;
