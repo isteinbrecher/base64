@@ -113,6 +113,8 @@ std::vector<char> base64::decode(const std::string& string)
       {
         auto this_char = data_char[count];
 
+        // Inspired by
+        // https://github.com/ReneNyffenegger/cpp-base64
         if (this_char >= 'A' && this_char <= 'Z')
           this_value = this_char - 'A';
         else if (this_char >= 'a' && this_char <= 'z')
