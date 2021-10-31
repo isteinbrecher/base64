@@ -44,9 +44,14 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 # Set the executable
+enable_testing()
+
 set(name_exe base64-tests-release)
 add_executable(${name_exe} tests/tests.cpp)
 target_link_libraries(${name_exe}
   base64
   gtest_main
 )
+
+include(GoogleTest)
+gtest_discover_tests(${name_exe})
