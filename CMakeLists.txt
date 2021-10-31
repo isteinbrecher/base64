@@ -22,7 +22,7 @@
 # SOFTWARE.
 # -----------------------------------------------------------------------------
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.14)
 
 # Project name
 project(base64)
@@ -30,16 +30,23 @@ project(base64)
 # Compiler flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -O3 -std=c++11")
 
-# Set compiler
-set(CMAKE_CXX_COMPILER g++)
-
 # Add libraries
 include_directories(src)
 add_library(base64 src/base64.cpp)
+
+# Include googletest
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  # commit for release-1.11.0
+  URL https://github.com/google/googletest/archive/e2239ee6043f73722e7aa812a459f54a28552929.zip
+)
+FetchContent_MakeAvailable(googletest)
 
 # Set the executable
 set(name_exe base64-tests-release)
 add_executable(${name_exe} tests/tests.cpp)
 target_link_libraries(${name_exe}
   base64
+  gtest_main
 )
