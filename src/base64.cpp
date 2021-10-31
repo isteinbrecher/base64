@@ -28,5 +28,16 @@
 
 #include "base64.h"
 
-void base64::decode() {}
-void base64::encode() {}
+/**
+ *
+ */
+std::string base64::encode(const char* buffer, const size_t& length) { return "empty"; }
+
+/**
+ *
+ */
+std::vector<char> base64::decode(const std::string& string)
+{
+  std::vector<char> char_vector;
+  return char_vector;
+}

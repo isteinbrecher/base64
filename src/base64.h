@@ -28,8 +28,29 @@
 
 #pragma once
 
+#include <string>
+#include <vector>
+
 namespace base64
 {
-  void decode();
-  void encode();
+  /**
+   * @brief Encode a character array to a base 64 string.
+   *
+   * The char array is converted to base64 according to https://en.wikipedia.org/wiki/Base64.
+   *
+   * @param buffer (in) Input character array.
+   * @param length (in) Length of the buffer.
+   * @return String representation of the base64 ending.
+   */
+  std::string encode(const char* buffer, const size_t& length);
+
+  /**
+   * @brief Decode a base64 string to a character array.
+   *
+   * The string is converted from base64 according to https://en.wikipedia.org/wiki/Base64.
+   *
+   * @param string (in) Base64 encoded string.
+   * @return Vector with the decoded character data.
+   */
+  std::vector<char> decode(const std::string& string);
 }  // namespace base64

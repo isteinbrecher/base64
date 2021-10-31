@@ -26,6 +26,16 @@
  * \brief Test the base64 de- and encode functions.
  */
 
+#include <iostream>
 #include "base64.h"
 
-int main() { return 0; }
+int main()
+{
+  std::string test = "Man";
+  auto res = base64::encode(test.c_str(), test.length());
+
+  std::cout << res;
+  std::cout << "\n";
+
+  return 0;
+}
