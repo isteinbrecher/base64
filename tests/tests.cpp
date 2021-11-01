@@ -132,6 +132,6 @@ void test_long_string(
 /**
  * \brief Define multiple long string tests.
  */
-TEST(base64_tests, test_long_string_1) { test_long_string(1, 14064419678309408447U, 0.001); }
-TEST(base64_tests, test_long_string_10) { test_long_string(10, 11796950950356069221U, 0.01); }
-TEST(base64_tests, test_long_string_100) { test_long_string(100, 14617901939564356506U, 0.1); }
+TEST(base64_tests, test_long_string_1) { test_long_string(1, 14064419678309408447U, 0.005); }
+TEST(base64_tests, test_long_string_10) { test_long_string(10, 11796950950356069221U, 0.05); }
+TEST(base64_tests, test_long_string_100) { test_long_string(100, 14617901939564356506U, 0.5); }
