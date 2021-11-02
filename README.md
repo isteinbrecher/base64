@@ -29,3 +29,12 @@ int main()
   return !results_match;
 }
 ```
+
+The expected output is
+
+```bash
+Input char stream:      "base64 encoding example!"
+Base64 endocded string: "YmFzZTY0IGVuY29kaW5nIGV4YW1wbGUh"
+Dedocded string:        "base64 encoding example!"
+Results match:          1
+```
