@@ -14,6 +14,8 @@ int main()
 {
   const char* input = "base64 encoding example!";
   const size_t input_length = 24;
+
+  // This is where the actual encoding and decoding takes place.
   std::string base64_encoded = base64::encode(input, input_length);
   std::vector<char> base64_decoded = base64::decode(base64_encoded);
 
