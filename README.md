@@ -24,7 +24,7 @@ int main()
 
   std::cout << "Input char stream:      \"" << input << "\"\n";
   std::cout << "Base64 endocded string: \"" << base64_encoded << "\"\n";
-  std::cout << "Dedocded string:        \"" << decoded_string << "\"\n";
+  std::cout << "Decoded string:         \"" << decoded_string << "\"\n";
   std::cout << "Results match:          " << results_match << "\n";
   return !results_match;
 }
@@ -35,6 +35,6 @@ The expected output is
 ```bash
 Input char stream:      "base64 encoding example!"
 Base64 endocded string: "YmFzZTY0IGVuY29kaW5nIGV4YW1wbGUh"
-Dedocded string:        "base64 encoding example!"
+Decoded string:         "base64 encoding example!"
 Results match:          1
 ```
